@@ -9,6 +9,10 @@ return [
         'label' => 'Editores Wysiwyg',
         'description' => 'Configura as preferências de Editores Wysiwyg.'
     ],
+    'permissions' => [
+        'name' => 'Editores Wysiwyg',
+		'manage_wysiwyg' => 'Permite configurar as preferências de Editores Wysiwyg'
+    ],
     'widget' => [
         'label' => 'Wysiwyg',
         'name' => 'Editores Wysiwyg',
