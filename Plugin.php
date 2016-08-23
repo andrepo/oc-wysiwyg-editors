@@ -33,15 +33,26 @@ class Plugin extends PluginBase
         ];
     }
 
+    public function registerPermissions()
+    {
+        return [
+            'anandpatel.wysiwygeditors.manage_wysiwyg' => [
+                'tab' => 'anandpatel.wysiwygeditors::lang.permissions.name',
+                'label' => 'anandpatel.wysiwygeditors::lang.permissions.manage_wysiwyg'
+            ],
+        ];
+    }
+
     public function registerSettings()
     {
         return [
             'settings' => [
-                'label' => 'anandpatel.wysiwygeditors::lang.settings.label',
+                'label'       => 'anandpatel.wysiwygeditors::lang.settings.label',
                 'description' => 'anandpatel.wysiwygeditors::lang.settings.description',
-                'icon' => 'icon-pencil-square-o',
-                'class' => 'AnandPatel\WysiwygEditors\Models\Settings',
-                'category' => SettingsManager::CATEGORY_CMS
+                'icon'        => 'icon-pencil-square-o',
+                'class'       => 'AnandPatel\WysiwygEditors\Models\Settings',
+                'category'    => SettingsManager::CATEGORY_CMS,
+                'permissions' => ['anandpatel.wysiwygeditors.manage_wysiwyg'],
             ]
         ];
     }
